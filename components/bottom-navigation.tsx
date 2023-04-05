@@ -1,46 +1,25 @@
-import React, {useState} from 'react';
-import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
+import React from 'react';
+import {StyleSheet} from 'react-native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Home from '../screens/home';
+import Workouts from '../screens/workouts';
+import MyRoutines from '../screens/my-routines';
+import News from '../screens/news';
+
+const Tab = createBottomTabNavigator();
 
 const BottomNavigation = (): JSX.Element => {
-  const [activeScreen, setActiveScreen] = useState('home');
-
   return (
-    <View style={styles.container}>
-      <TouchableOpacity
-        style={styles.logoContainer}
-        onPress={() => setActiveScreen('home')}>
-        <Image style={styles.tinyLogo} source={require('../assets/home.png')} />
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.logoContainer}
-        onPress={() => setActiveScreen('workout')}>
-        <Image
-          style={styles.tinyLogo}
-          source={require('../assets/excercise.png')}
-        />
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.logoContainer}
-        onPress={() => setActiveScreen('add')}>
-        <Image
-          style={styles.tinyLogo}
-          source={require('../assets/button.png')}
-        />
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.logoContainer}
-        onPress={() => setActiveScreen('groceries')}>
-        <Image
-          style={styles.tinyLogo}
-          source={require('../assets/groceries.png')}
-        />
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.logoContainer}
-        onPress={() => setActiveScreen('news')}>
-        <Image style={styles.tinyLogo} source={require('../assets/news.png')} />
-      </TouchableOpacity>
-    </View>
+    <Tab.Navigator
+      screenOptions={{
+        tabBarShowLabel: false,
+        tabBarStyle: styles.bottomNavigation,
+      }}>
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Workouts" component={Workouts} />
+      <Tab.Screen name="Routine" component={MyRoutines} />
+      <Tab.Screen name="News" component={News} />
+    </Tab.Navigator>
   );
 };
 
@@ -59,6 +38,12 @@ const styles = StyleSheet.create({
   tinyLogo: {
     width: 32,
     height: 32,
+  },
+  bottomNavigation: {
+    position: 'absolute',
+    bottom: 0,
+    backgroundColor: '#09131F',
+    height: 60,
   },
 });
 

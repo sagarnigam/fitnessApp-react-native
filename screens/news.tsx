@@ -1,9 +1,9 @@
 import {StyleSheet, Text, View} from 'react-native';
 
-const MyRoutines = (): JSX.Element => {
+const News = (): JSX.Element => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Hello to Routine</Text>
+      <Text style={styles.text}>Hello to news</Text>
     </View>
   );
 };
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MyRoutines;
+export default News;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Image} from 'react-native';
+import {StyleSheet, Image} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 // Screens
@@ -24,19 +24,19 @@ const BottomNavigation = (): JSX.Element => {
   const screenOptions = ({route}) => ({
     tabBarIcon: () => {
       let iconName;
-
+  
       if (route.name === 'home') {
         iconName = require('../assets/home.png');
       } else if (route.name === 'routines') {
         iconName = require('../assets/excercise.png');
       } else if (route.name === 'button') {
         iconName = require('../assets/button.png');
-      }  else if (route.name === 'groceries') {
+      } else if (route.name === 'groceries') {
         iconName = require('../assets/groceries.png');
       } else if (route.name === 'news') {
         iconName = require('../assets/news.png');
       }
-
+  
       return <Image source={iconName} style={{width: 25, height: 25}} />;
     },
     tabBarShowLabel: false,

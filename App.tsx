@@ -2,14 +2,12 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 
-import Header from './components/header';
 import BottomNavigation from './components/bottom-navigation';
 
 const App = (): JSX.Element => {
   return (
     <>
       <View style={styles.container}>
-        <Header />
         <View style={styles.scrollarea}>
           <NavigationContainer>
             <BottomNavigation />

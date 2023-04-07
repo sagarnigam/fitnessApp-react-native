@@ -4,9 +4,10 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 // Screens
 import Home from '../screens/home';
-import Workouts from '../screens/workouts';
 import MyRoutines from '../screens/my-routines';
 import News from '../screens/news';
+import AddScreen from '../screens/addScreen';
+import Profile from '../shared/profile';
 
 // Constants
 import {
@@ -16,7 +17,14 @@ import {
   NEWS_ROUTE_NAME,
   ROUTINES_ROUTE_NAME,
 } from '../constanst/route-names';
-import AddScreen from '../screens/addScreen';
+
+// icons
+
+const homeIcon = require('../assets/home.png');
+const excerciseIcon = require('../assets/excercise.png');
+const buttonIcon = require('../assets/button.png');
+const groceriesIcon = require('../assets/groceries.png');
+const newsIcon = require('../assets/news.png');
 
 const Tab = createBottomTabNavigator();
 
@@ -24,19 +32,18 @@ const BottomNavigation = (): JSX.Element => {
   const screenOptions = ({route}) => ({
     tabBarIcon: () => {
       let iconName;
-  
+
       if (route.name === 'home') {
-        iconName = require('../assets/home.png');
+        iconName = homeIcon;
       } else if (route.name === 'routines') {
-        iconName = require('../assets/excercise.png');
+        iconName = excerciseIcon;
       } else if (route.name === 'button') {
-        iconName = require('../assets/button.png');
+        iconName = buttonIcon;
       } else if (route.name === 'groceries') {
-        iconName = require('../assets/groceries.png');
+        iconName = groceriesIcon;
       } else if (route.name === 'news') {
-        iconName = require('../assets/news.png');
+        iconName = newsIcon;
       }
-  
       return <Image source={iconName} style={{width: 25, height: 25}} />;
     },
     tabBarShowLabel: false,
@@ -47,11 +54,56 @@ const BottomNavigation = (): JSX.Element => {
     <Tab.Navigator
       initialRouteName={HOME_ROUTE_NAME}
       screenOptions={screenOptions}>
-      <Tab.Screen name={HOME_ROUTE_NAME} component={Home} />
-      <Tab.Screen name={ROUTINES_ROUTE_NAME} component={MyRoutines} />
-      <Tab.Screen name={BUTTON_ROUTE_NAME} component={AddScreen} />
-      <Tab.Screen name={GROCERIES_ROUTE_NAME} component={MyRoutines} />
-      <Tab.Screen name={NEWS_ROUTE_NAME} component={News} />
+      <Tab.Screen
+        name={HOME_ROUTE_NAME}
+        component={Home}
+        options={{
+          headerTitle: 'Hello Sagar',
+          headerTitleStyle: styles.headerTitle,
+          headerTransparent: true,
+          headerRight: () => <Profile />,
+        }}
+      />
+      <Tab.Screen
+        name={ROUTINES_ROUTE_NAME}
+        component={MyRoutines}
+        options={{
+          headerTitle: 'My Routines',
+          headerTitleStyle: styles.headerTitle,
+          headerTransparent: true,
+          headerRight: () => <Profile />,
+        }}
+      />
+      <Tab.Screen
+        name={BUTTON_ROUTE_NAME}
+        component={AddScreen}
+        options={{
+          headerTitle: 'Add Exercise',
+          headerTitleStyle: styles.headerTitle,
+          headerTransparent: true,
+          headerRight: () => <Profile />,
+        }}
+      />
+      <Tab.Screen
+        name={GROCERIES_ROUTE_NAME}
+        component={MyRoutines}
+        options={{
+          headerTitle: 'Grocery List',
+          headerTitleStyle: styles.headerTitle,
+          headerTransparent: true,
+          headerRight: () => <Profile />,
+        }}
+      />
+      <Tab.Screen
+        name={NEWS_ROUTE_NAME}
+        component={News}
+        options={{
+          headerTitle: 'News',
+          headerTitleStyle: styles.headerTitle,
+          headerTransparent: true,
+          headerRight: () => <Profile />,
+        }}
+      />
     </Tab.Navigator>
   );
 };
@@ -77,6 +129,13 @@ const styles = StyleSheet.create({
     bottom: 0,
     backgroundColor: '#09131F',
     height: 60,
+  },
+  text: {
+    color: 'white',
+  },
+  headerTitle: {
+    color: 'white',
+    fontSize: 35,
   },
 });
 

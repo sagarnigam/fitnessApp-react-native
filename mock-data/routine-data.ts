@@ -1,6 +1,6 @@
 import {RoutineInfo} from '../models/routines';
 
-export const ROUTINES: RoutineInfo = [
+export const ROUTINES: RoutineInfo[] = [
   {
     id: '1',
     name: 'Routine 1',

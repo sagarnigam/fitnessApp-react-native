@@ -1,26 +1,29 @@
-import {StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
 const Routine = ({routineDetails}): JSX.Element => {
   return (
-    <View style={styles.container}>
-      <View style={styles.headingContainer}>
-        <Text style={styles.text}>{routineDetails.name}</Text>
+    <TouchableOpacity>
+      <View style={styles.container}>
+        <View style={styles.headingContainer}>
+          <Text style={styles.text}>{routineDetails.name}</Text>
+        </View>
+        <View style={styles.detailsContainer}>
+          <View style={styles.volumeContainer}>
+            <Text style={styles.detailsText}>Volume</Text>
+            <Text style={styles.valueText}>450 Kg</Text>
+          </View>
+          <View style={styles.timeContainer}>
+            <Text style={styles.detailsText}>Est. Time</Text>
+            <Text style={styles.valueText}>45 min</Text>
+          </View>
+          <View style={styles.timeContainer}>
+            <Text style={styles.detailsText}>Calories</Text>
+            <Text style={styles.valueText}>250</Text>
+          </View>
+        </View>
       </View>
-      <View style={styles.detailsContainer}>
-        <View style={styles.volumeContainer}>
-          <Text style={styles.detailsText}>Volume</Text>
-          <Text style={styles.valueText}>450 Kg</Text>
-        </View>
-        <View style={styles.timeContainer}>
-          <Text style={styles.detailsText}>Est. Time</Text>
-          <Text style={styles.valueText}>45 min</Text>
-        </View>
-        <View style={styles.timeContainer}>
-          <Text style={styles.detailsText}>Calories</Text>
-          <Text style={styles.valueText}>250</Text>
-        </View>
-      </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

@@ -1,6 +1,7 @@
-import {useEffect, useState} from 'react';
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {ScrollView, StyleSheet, View} from 'react-native';
 
+import Routine from '../components/routine';
 import {RoutineInfo} from '../models/routines';
 import {getRoutineData} from '../services/routine-service';
 
@@ -15,7 +16,7 @@ const MyRoutines = (): JSX.Element => {
     <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         {routineData.map(item => (
-          <Text style={styles.text}>{item.name}</Text>
+          <Routine routineDetails={item} />
         ))}
       </ScrollView>
     </View>
@@ -24,12 +25,12 @@ const MyRoutines = (): JSX.Element => {
 
 const styles = StyleSheet.create({
   container: {
+    width: '100%',
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#09131F',
   },
   scrollContainer: {
+    width: '100%',
     marginTop: 120,
   },
   text: {

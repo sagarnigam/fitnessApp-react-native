@@ -17,6 +17,7 @@ import {
   NEWS_ROUTE_NAME,
   ROUTINES_ROUTE_NAME,
 } from '../constanst/route-names';
+import MyRoutineNavigationStack from './routine-navigation-stack';
 
 // icons
 
@@ -66,7 +67,7 @@ const BottomNavigation = (): JSX.Element => {
       />
       <Tab.Screen
         name={ROUTINES_ROUTE_NAME}
-        component={MyRoutines}
+        component={MyRoutineNavigationStack}
         options={{
           headerTitle: 'My Routines',
           headerTitleStyle: styles.headerTitle,

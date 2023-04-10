@@ -1,6 +1,6 @@
 import {StyleSheet, Text, View} from 'react-native';
 
-const Workouts = (): JSX.Element => {
+const Workouts = ({}): JSX.Element => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Hello to workouts</Text>

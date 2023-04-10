@@ -1,12 +1,17 @@
 import React, {useEffect, useState} from 'react';
-import {ScrollView, StyleSheet, View} from 'react-native';
+import {ScrollView, StyleSheet, View, TouchableOpacity} from 'react-native';
 
 import Routine from '../components/routine';
 import {RoutineInfo} from '../models/routines';
 import {getRoutineData} from '../services/routine-service';
 
-const MyRoutines = (): JSX.Element => {
+const MyRoutines = ({navigation}): JSX.Element => {
   const [routineData, setRoutineData] = useState<RoutineInfo[]>([]);
+
+  const navigateToWorkout = () => {
+    console.log('navigateToWorkout');
+    navigation.navigate('workout');
+  };
 
   useEffect(() => {
     setRoutineData(getRoutineData());
@@ -16,7 +21,9 @@ const MyRoutines = (): JSX.Element => {
     <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         {routineData.map(item => (
-          <Routine routineDetails={item} />
+          <TouchableOpacity onPress={navigateToWorkout}>
+            <Routine routineDetails={item} />
+          </TouchableOpacity>
         ))}
       </ScrollView>
     </View>
@@ -31,7 +38,7 @@ const styles = StyleSheet.create({
   },
   scrollContainer: {
     width: '100%',
-    marginTop: 120,
+    marginTop: 10,
   },
   text: {
     fontSize: 24,

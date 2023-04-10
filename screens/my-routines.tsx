@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   },
   scrollContainer: {
     width: '100%',
-    marginTop: 10,
+    marginTop: 100,
   },
   text: {
     fontSize: 24,

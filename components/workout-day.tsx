@@ -1,11 +1,11 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
-const WorkoutDay = ({workoutDayNo}): JSX.Element => {
+const WorkoutDay = ({workoutDay}): JSX.Element => {
   return (
     <View style={styles.container}>
       <View style={styles.headingContainer}>
-        <Text style={styles.text}>Day {workoutDayNo}</Text>
+        <Text style={styles.text}>{workoutDay}</Text>
       </View>
       <View style={styles.actionContainer}>
         <Text style={styles.text}>{'>'}</Text>

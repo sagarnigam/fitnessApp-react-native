@@ -34,10 +34,11 @@ const styles = StyleSheet.create({
     width: '100%',
     flex: 1,
     backgroundColor: '#09131F',
+    paddingTop: 100,
+    paddingBottom: 70,
   },
   scrollContainer: {
     width: '100%',
-    marginTop: 100,
   },
   text: {
     fontSize: 24,

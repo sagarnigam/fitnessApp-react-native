@@ -2,6 +2,6 @@ export interface RoutineInfo {
   id: string;
   name: string;
   durationWeeks: number;
-  excercise: any[];
+  exercise: any;
   estTime: string;
 }

@@ -8,9 +8,8 @@ import {getRoutineData} from '../services/routine-service';
 const MyRoutines = ({navigation}): JSX.Element => {
   const [routineData, setRoutineData] = useState<RoutineInfo[]>([]);
 
-  const navigateToWorkout = () => {
-    console.log('navigateToWorkout');
-    navigation.navigate('workout');
+  const navigateToWorkout = (item): void => {
+    navigation.navigate('workout', item);
   };
 
   useEffect(() => {
@@ -21,7 +20,7 @@ const MyRoutines = ({navigation}): JSX.Element => {
     <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         {routineData.map(item => (
-          <TouchableOpacity onPress={navigateToWorkout}>
+          <TouchableOpacity onPress={() => navigateToWorkout(item)}>
             <Routine routineDetails={item} />
           </TouchableOpacity>
         ))}

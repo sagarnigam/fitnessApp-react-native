@@ -11,11 +11,11 @@ const Stack = createNativeStackNavigator();
 const MyRoutineNavigationStack = (): JSX.Element => {
   return (
     <Stack.Navigator
-      initialRouteName="routine"
+      initialRouteName="routines"
       screenOptions={{
         headerShown: false,
       }}>
-      <Stack.Screen name="routine" component={MyRoutines} />
+      <Stack.Screen name="routines" component={MyRoutines} />
       <Stack.Screen name="workout" component={Workouts} />
       <Stack.Screen name="workoutSchedule" component={WorkoutSchedule} />
     </Stack.Navigator>

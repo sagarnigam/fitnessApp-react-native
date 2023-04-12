@@ -1,15 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import {ScrollView, StyleSheet, View, TouchableOpacity} from 'react-native';
 
-import Routine from '../components/routine';
+import RoutineDetailsWidget from '../components/routine-details-widget';
 import {RoutineInfo} from '../models/routines';
 import {getRoutineData} from '../services/routine-service';
 
 const MyRoutines = ({navigation}): JSX.Element => {
   const [routineData, setRoutineData] = useState<RoutineInfo[]>([]);
 
-  const navigateToWorkout = (item): void => {
-    navigation.navigate('workout', item);
+  const navigateTo = (item): void => {
+    navigation.navigate('routineSchedule', item);
   };
 
   useEffect(() => {
@@ -20,8 +20,8 @@ const MyRoutines = ({navigation}): JSX.Element => {
     <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         {routineData.map(item => (
-          <TouchableOpacity onPress={() => navigateToWorkout(item)}>
-            <Routine routineDetails={item} />
+          <TouchableOpacity onPress={() => navigateTo(item)}>
+            <RoutineDetailsWidget routineDetails={item} />
           </TouchableOpacity>
         ))}
       </ScrollView>

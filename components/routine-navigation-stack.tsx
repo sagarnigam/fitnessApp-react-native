@@ -3,8 +3,8 @@ import {StyleSheet} from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import MyRoutines from '../screens/my-routines';
-import Workouts from '../screens/workout';
 import WorkoutSchedule from './workout-schedule';
+import RoutineSchedule from '../screens/routine-schedule';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,7 +16,7 @@ const MyRoutineNavigationStack = (): JSX.Element => {
         headerShown: false,
       }}>
       <Stack.Screen name="routines" component={MyRoutines} />
-      <Stack.Screen name="workout" component={Workouts} />
+      <Stack.Screen name="routineSchedule" component={RoutineSchedule} />
       <Stack.Screen name="workoutSchedule" component={WorkoutSchedule} />
     </Stack.Navigator>
   );

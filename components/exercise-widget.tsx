@@ -1,11 +1,11 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
-const Routine = ({routineDetails}): JSX.Element => {
+const ExerciseWidget = ({exerciseDetails}): JSX.Element => {
   return (
     <View style={styles.container}>
       <View style={styles.headingContainer}>
-        <Text style={styles.text}>{routineDetails.name}</Text>
+        <Text style={styles.text}>{exerciseDetails}</Text>
       </View>
       <View style={styles.detailsContainer}>
         <View style={styles.volumeContainer}>
@@ -36,7 +36,6 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 24,
-    fontWeight: 'bold',
     color: 'white',
   },
   headingContainer: {
@@ -70,4 +69,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Routine;
+export default ExerciseWidget;

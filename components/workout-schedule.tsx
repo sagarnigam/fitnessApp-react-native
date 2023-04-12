@@ -1,12 +1,12 @@
 import React from 'react';
 import {StyleSheet, ScrollView, View, Text} from 'react-native';
-import Routine from '../components/routine';
+import RoutineDetailsWidget from './routine-details-widget';
 
 const WorkoutSchedule = (props): JSX.Element => {
   return (
     <View style={styles.container}>
       <View style={styles.detailsContainer}>
-        <Routine routineDetails={props.route.params} />
+        <RoutineDetailsWidget routineDetails={props.route.params} />
       </View>
       <View style={styles.daysContainer}>
         <ScrollView>

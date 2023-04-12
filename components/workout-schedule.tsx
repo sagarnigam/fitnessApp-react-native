@@ -1,13 +1,8 @@
 import React from 'react';
-import {StyleSheet, ScrollView, View, TouchableOpacity} from 'react-native';
-import WorkoutDay from '../components/workout-day';
+import {StyleSheet, ScrollView, View, Text} from 'react-native';
 import Routine from '../components/routine';
 
-const Workouts = (props): JSX.Element => {
-  const navigateTo = (item): void => {
-    props.navigation.navigate('workoutSchedule', item);
-  };
-
+const WorkoutSchedule = (props): JSX.Element => {
   return (
     <View style={styles.container}>
       <View style={styles.detailsContainer}>
@@ -15,11 +10,7 @@ const Workouts = (props): JSX.Element => {
       </View>
       <View style={styles.daysContainer}>
         <ScrollView>
-          {Object.keys(props.route.params.exercise).map(item => (
-            <TouchableOpacity onPress={() => navigateTo(props.route.params)}>
-              <WorkoutDay workoutDay={item} />
-            </TouchableOpacity>
-          ))}
+          <Text style={styles.text}>Hello to schedule</Text>
         </ScrollView>
       </View>
     </View>
@@ -47,4 +38,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Workouts;
+export default WorkoutSchedule;

@@ -49,6 +49,14 @@ export const ROUTINES: RoutineInfo[] = [
             'Set 3': [10, 8],
           },
         },
+        {
+          name: 'Pull ups',
+          sets: {
+            'Set 1': [0, 5],
+            'Set 2': [0, 7],
+            'Set 3': [0, 10],
+          },
+        },
       ],
       'Day 2': [],
       'Day 3': [],

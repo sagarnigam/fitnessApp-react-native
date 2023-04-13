@@ -1,5 +1,7 @@
 import React from 'react';
 import {StyleSheet, ScrollView, View, TouchableOpacity} from 'react-native';
+import {Divider} from '@rneui/themed';
+
 import WorkoutDay from '../components/workout-day';
 import RoutineDetailsWidget from '../components/routine-details-widget';
 
@@ -13,10 +15,14 @@ const RoutineSchedule = (props): JSX.Element => {
       <View style={styles.detailsContainer}>
         <RoutineDetailsWidget routineDetails={props.route.params} />
       </View>
+      <Divider inset={true} insetType="middle" />
       <View style={styles.daysContainer}>
         <ScrollView>
           {Object.keys(props.route.params.exercise).map(item => (
-            <TouchableOpacity onPress={() => navigateTo(props.route.params)}>
+            <TouchableOpacity
+              onPress={() =>
+                navigateTo({props: props.route.params, selectedDay: item})
+              }>
               <WorkoutDay workoutDay={item} />
             </TouchableOpacity>
           ))}

@@ -1,16 +1,24 @@
 import React from 'react';
-import {StyleSheet, ScrollView, View, Text} from 'react-native';
+import {StyleSheet, ScrollView, View} from 'react-native';
+import {Divider} from '@rneui/themed';
+
+import ExerciseWidget from './exercise-widget';
 import RoutineDetailsWidget from './routine-details-widget';
 
 const WorkoutSchedule = (props): JSX.Element => {
   return (
     <View style={styles.container}>
       <View style={styles.detailsContainer}>
-        <RoutineDetailsWidget routineDetails={props.route.params} />
+        <RoutineDetailsWidget routineDetails={props.route.params.props} />
       </View>
+      <Divider inset={true} insetType="middle" />
       <View style={styles.daysContainer}>
-        <ScrollView>
-          <Text style={styles.text}>Hello to schedule</Text>
+        <ScrollView contentContainerStyle={styles.scrollContainer}>
+          {props.route.params.props.exercise[
+            props.route.params.selectedDay
+          ].map(exercise => (
+            <ExerciseWidget exerciseDetails={exercise} />
+          ))}
         </ScrollView>
       </View>
     </View>
@@ -36,6 +44,7 @@ const styles = StyleSheet.create({
   daysContainer: {
     flex: 4,
   },
+  scrollContainer: {},
 });
 
 export default WorkoutSchedule;

@@ -5,7 +5,7 @@ const ExerciseWidget = ({exerciseDetails}): JSX.Element => {
   return (
     <View style={styles.container}>
       <View style={styles.headingContainer}>
-        <Text style={styles.text}>{exerciseDetails}</Text>
+        <Text style={styles.text}>{exerciseDetails.name}</Text>
       </View>
       <View style={styles.detailsContainer}>
         <View style={styles.volumeContainer}>
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
   text: {
-    fontSize: 24,
+    fontSize: 20,
     color: 'white',
   },
   headingContainer: {

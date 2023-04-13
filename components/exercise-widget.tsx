@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import SetWidget from './set-widget';
 
 const ExerciseWidget = ({exerciseDetails}): JSX.Element => {
   return (
@@ -7,19 +8,23 @@ const ExerciseWidget = ({exerciseDetails}): JSX.Element => {
       <View style={styles.headingContainer}>
         <Text style={styles.text}>{exerciseDetails.name}</Text>
       </View>
-      <View style={styles.detailsContainer}>
-        <View style={styles.volumeContainer}>
-          <Text style={styles.detailsText}>Volume</Text>
-          <Text style={styles.valueText}>450 Kg</Text>
+      <View style={styles.setDetailsContainer}>
+        <View style={styles.setDetailsHeadings}>
+          <View style={styles.setDetailsSubContainer}>
+            <Text style={styles.setDetailsText}></Text>
+          </View>
+          <View style={styles.setDetailsSubContainer}>
+            <Text style={styles.setDetailsText}>Weight (Kgs)</Text>
+          </View>
+          <View style={styles.setDetailsSubContainer}>
+            <Text style={styles.setDetailsText}>Reps</Text>
+          </View>
         </View>
-        <View style={styles.timeContainer}>
-          <Text style={styles.detailsText}>Est. Time</Text>
-          <Text style={styles.valueText}>45 min</Text>
-        </View>
-        <View style={styles.timeContainer}>
-          <Text style={styles.detailsText}>Calories</Text>
-          <Text style={styles.valueText}>250</Text>
-        </View>
+        {Object.keys(exerciseDetails.sets).map(setNo => (
+          <SetWidget
+            SetDetails={{setNo: setNo, setReps: exerciseDetails.sets[setNo]}}
+          />
+        ))}
       </View>
     </View>
   );
@@ -43,29 +48,24 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingTop: 5,
   },
-  detailsContainer: {
+  setDetailsContainer: {
+    paddingTop: 10,
     flex: 2,
+    flexDirection: 'column',
+  },
+  setDetailsHeadings: {
+    width: '100%',
+    flex: 1,
     flexDirection: 'row',
+    marginBottom: 7,
   },
-  volumeContainer: {
-    flex: 1,
-    margin: 8,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  timeContainer: {
-    flex: 1,
-    margin: 8,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  detailsText: {
+  setDetailsText: {
     fontSize: 14,
     color: '#ffffff80',
   },
-  valueText: {
-    fontSize: 18,
-    color: 'white',
+  setDetailsSubContainer: {
+    flex: 1,
+    alignItems: 'center',
   },
 });
 

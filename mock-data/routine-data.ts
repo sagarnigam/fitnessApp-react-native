@@ -15,6 +15,7 @@ export const ROUTINES: RoutineInfo[] = [
             'Set 3': [15, 8],
             'Set 4': [17.5, 6],
           },
+          type: 'normal',
         },
         {
           name: 'DB Incline chest Press',
@@ -24,6 +25,7 @@ export const ROUTINES: RoutineInfo[] = [
             'Set 3': [12, 8],
             'Set 4': [15, 6],
           },
+          type: 'normal',
         },
         {
           name: 'Cable Chest Fly',
@@ -32,6 +34,7 @@ export const ROUTINES: RoutineInfo[] = [
             'Set 2': [10, 12],
             'Set 3': [10, 10],
           },
+          type: 'normal',
         },
         {
           name: 'Triceps Pushdown',
@@ -40,6 +43,7 @@ export const ROUTINES: RoutineInfo[] = [
             'Set 2': [7.5, 12],
             'Set 3': [7.5, 12],
           },
+          type: 'normal',
         },
         {
           name: 'Skull Crusher',
@@ -48,6 +52,7 @@ export const ROUTINES: RoutineInfo[] = [
             'Set 2': [7.5, 10],
             'Set 3': [10, 8],
           },
+          type: 'normal',
         },
         {
           name: 'Pull ups',
@@ -56,9 +61,106 @@ export const ROUTINES: RoutineInfo[] = [
             'Set 2': [0, 7],
             'Set 3': [0, 10],
           },
+          type: 'normal',
         },
       ],
-      'Day 2': [],
+      'Day 2': [
+        {
+          name: 'Barbell Hip thrust',
+          type: 'normal',
+          sets: {
+            'Set 1': [10, 20],
+            'Set 2': [10, 20],
+          },
+        },
+        {
+          name: 'Barbell Back Squat (WUS)',
+          type: 'normal',
+          sets: {
+            'Set 1': [10, 6],
+            'Set 2': [10, 6],
+            'Set 3': [10, 6],
+          },
+        },
+        {
+          name: 'Barbell Back Squat',
+          type: 'normal',
+          sets: {
+            'Set 1': [20, 6],
+            'Set 2': [20, 6],
+            'Set 3': [20, 6],
+            'Set 4': [20, 6],
+          },
+        },
+        {
+          type: 'superset',
+          exercise: [
+            {
+              name: 'Stiff Leg Deadlift',
+              type: 'normal',
+              sets: {
+                'Set 1': [10, 15],
+                'Set 2': [10, 15],
+                'Set 3': [10, 15],
+              },
+            },
+            {
+              name: 'DB Bulgarian Split Squats (Both Sides)',
+              type: 'normal',
+              sets: {
+                'Set 1': [10, 10],
+                'Set 2': [10, 10],
+                'Set 3': [10, 10],
+              },
+            },
+          ],
+        },
+        {
+          type: 'gaintset',
+          exercise: [
+            {
+              name: 'Lying leg Curls',
+              type: 'normal',
+              sets: {
+                'Set 1': [10, 15],
+                'Set 2': [10, 15],
+                'Set 3': [10, 15],
+                'Set 4': [10, 15],
+              },
+            },
+            {
+              name: 'Leg Press',
+              type: 'normal',
+              sets: {
+                'Set 1': [10, 10],
+                'Set 2': [10, 10],
+                'Set 3': [10, 10],
+                'Set 4': [10, 10],
+              },
+            },
+            {
+              name: 'Superman',
+              type: 'normal',
+              sets: {
+                'Set 1': [0, 10],
+                'Set 2': [0, 10],
+                'Set 3': [0, 10],
+                'Set 4': [0, 10],
+              },
+            },
+            {
+              name: 'Kettlebell swings',
+              type: 'normal',
+              sets: {
+                'Set 1': [10, 5],
+                'Set 2': [10, 5],
+                'Set 3': [10, 5],
+                'Set 4': [10, 5],
+              },
+            },
+          ],
+        },
+      ],
       'Day 3': [],
       'Day 4': [],
       'Day 5': [],

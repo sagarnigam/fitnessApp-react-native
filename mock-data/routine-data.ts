@@ -1,6 +1,6 @@
 import {RoutineInfo} from '../models/routines';
 
-export const ROUTINES: RoutineInfo[] = [
+export const ROUTINES: any[] = [
   {
     id: '1',
     name: 'Routine 1',
@@ -9,58 +9,32 @@ export const ROUTINES: RoutineInfo[] = [
       'Day 1': [
         {
           name: 'Chest Press',
-          sets: {
-            'Set 1': [10, 15],
-            'Set 2': [10, 15],
-            'Set 3': [15, 8],
-            'Set 4': [17.5, 6],
-          },
+          description: '2 sets, 20 Reps, 1 min rest',
           type: 'normal',
         },
         {
           name: 'DB Incline chest Press',
-          sets: {
-            'Set 1': [10, 15],
-            'Set 2': [10, 15],
-            'Set 3': [12, 8],
-            'Set 4': [15, 6],
-          },
+          description: '2 sets, 20 Reps, 1 min rest',
           type: 'normal',
         },
         {
           name: 'Cable Chest Fly',
-          sets: {
-            'Set 1': [10, 15],
-            'Set 2': [10, 12],
-            'Set 3': [10, 10],
-          },
+          description: '2 sets, 20 Reps, 1 min rest',
           type: 'normal',
         },
         {
           name: 'Triceps Pushdown',
-          sets: {
-            'Set 1': [7.5, 12],
-            'Set 2': [7.5, 12],
-            'Set 3': [7.5, 12],
-          },
+          description: '2 sets, 20 Reps, 1 min rest',
           type: 'normal',
         },
         {
           name: 'Skull Crusher',
-          sets: {
-            'Set 1': [5, 12],
-            'Set 2': [7.5, 10],
-            'Set 3': [10, 8],
-          },
+          description: '2 sets, 20 Reps, 1 min rest',
           type: 'normal',
         },
         {
           name: 'Pull ups',
-          sets: {
-            'Set 1': [0, 5],
-            'Set 2': [0, 7],
-            'Set 3': [0, 10],
-          },
+          description: '2 sets, 20 Reps, 1 min rest',
           type: 'normal',
         },
       ],
@@ -68,29 +42,17 @@ export const ROUTINES: RoutineInfo[] = [
         {
           name: 'Barbell Hip thrust',
           type: 'normal',
-          sets: {
-            'Set 1': [10, 20],
-            'Set 2': [10, 20],
-          },
+          description: '2 sets, 20 Reps, 1 min rest',
         },
         {
           name: 'Barbell Back Squat (WUS)',
           type: 'normal',
-          sets: {
-            'Set 1': [10, 6],
-            'Set 2': [10, 6],
-            'Set 3': [10, 6],
-          },
+          description: '3 sets, 6 Reps, 2 min rest',
         },
         {
           name: 'Barbell Back Squat',
           type: 'normal',
-          sets: {
-            'Set 1': [20, 6],
-            'Set 2': [20, 6],
-            'Set 3': [20, 6],
-            'Set 4': [20, 6],
-          },
+          description: '4 sets, 6 Reps, 5 min rest',
         },
         {
           type: 'superset',
@@ -98,20 +60,12 @@ export const ROUTINES: RoutineInfo[] = [
             {
               name: 'Stiff Leg Deadlift',
               type: 'normal',
-              sets: {
-                'Set 1': [10, 15],
-                'Set 2': [10, 15],
-                'Set 3': [10, 15],
-              },
+              description: '3 sets, 15 Reps, No rest',
             },
             {
               name: 'DB Bulgarian Split Squats (Both Sides)',
               type: 'normal',
-              sets: {
-                'Set 1': [10, 10],
-                'Set 2': [10, 10],
-                'Set 3': [10, 10],
-              },
+              description: '3 sets, 10 Reps, 2 min rest',
             },
           ],
         },
@@ -121,42 +75,22 @@ export const ROUTINES: RoutineInfo[] = [
             {
               name: 'Lying leg Curls',
               type: 'normal',
-              sets: {
-                'Set 1': [10, 15],
-                'Set 2': [10, 15],
-                'Set 3': [10, 15],
-                'Set 4': [10, 15],
-              },
+              description: '4 sets, 10 Reps, No rest',
             },
             {
               name: 'Leg Press',
               type: 'normal',
-              sets: {
-                'Set 1': [10, 10],
-                'Set 2': [10, 10],
-                'Set 3': [10, 10],
-                'Set 4': [10, 10],
-              },
+              description: '4 sets, 10 Reps, No rest',
             },
             {
               name: 'Superman',
               type: 'normal',
-              sets: {
-                'Set 1': [0, 10],
-                'Set 2': [0, 10],
-                'Set 3': [0, 10],
-                'Set 4': [0, 10],
-              },
+              description: '4 sets, 10 Reps, No rest',
             },
             {
               name: 'Kettlebell swings',
               type: 'normal',
-              sets: {
-                'Set 1': [10, 5],
-                'Set 2': [10, 5],
-                'Set 3': [10, 5],
-                'Set 4': [10, 5],
-              },
+              description: '4 sets, 10 Reps, 2 min rest',
             },
           ],
         },

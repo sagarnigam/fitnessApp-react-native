@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import SetWidget from './set-widget';
 
-const ExerciseWidget = ({exerciseDetails}): JSX.Element => {
+const LogExerciseWidget = ({exerciseDetails}): JSX.Element => {
   return (
     <View style={styles.container}>
       <View style={styles.headingContainer}>
@@ -69,4 +69,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ExerciseWidget;
+export default LogExerciseWidget;

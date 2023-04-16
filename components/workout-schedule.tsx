@@ -33,11 +33,6 @@ const styles = StyleSheet.create({
     paddingTop: 100,
     paddingBottom: 70,
   },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: 'white',
-  },
   detailsContainer: {
     flex: 1,
   },

@@ -1,5 +1,7 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import IndividualExercise from './individual-exercise';
+import {Divider} from '@rneui/themed';
 
 const ExerciseDetailsWidget = ({exerciseDetails}): JSX.Element => {
   return (
@@ -14,18 +16,13 @@ const ExerciseDetailsWidget = ({exerciseDetails}): JSX.Element => {
             : styles.gaintExerciseColor,
         ]}></View>
       <View style={styles.container}>
-        <View style={styles.headingContainer}>
-          <Text style={styles.text}>{exerciseDetails.name}</Text>
-        </View>
-        <View style={styles.setDetailsContainer}>
-          <View style={styles.setDetailsHeadings}>
-            <View style={styles.setDetailsSubContainer}>
-              <Text style={styles.setDetailsText}>
-                {exerciseDetails.description}
-              </Text>
-            </View>
-          </View>
-        </View>
+        {exerciseDetails.type === 'normal' ? (
+          <IndividualExercise exerciseDetails={exerciseDetails} />
+        ) : (
+          exerciseDetails.exercise.map(exercise => (
+            <IndividualExercise exerciseDetails={exercise} />
+          ))
+        )}
       </View>
     </View>
   );
@@ -57,35 +54,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     padding: 10,
     borderRadius: 15,
-  },
-  text: {
-    fontSize: 20,
-    color: 'white',
-  },
-  headingContainer: {
-    flex: 1,
-    paddingLeft: 10,
-    paddingTop: 5,
-    alignItems: 'center',
-  },
-  setDetailsContainer: {
-    paddingTop: 10,
-    flex: 2,
-    flexDirection: 'column',
-  },
-  setDetailsHeadings: {
-    width: '100%',
-    flex: 1,
-    flexDirection: 'row',
-    marginBottom: 7,
-  },
-  setDetailsText: {
-    fontSize: 18,
-    color: '#ffffff80',
-  },
-  setDetailsSubContainer: {
-    flex: 1,
-    alignItems: 'center',
   },
 });
 

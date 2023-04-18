@@ -3,8 +3,10 @@ import {StyleSheet, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 
 import BottomNavigation from './components/bottom-navigation';
+import {getAuthenticatedUser} from './services/authentication-service';
 
 const App = (): JSX.Element => {
+  getAuthenticatedUser();
   return (
     <>
       <View style={styles.container}>

@@ -3,6 +3,7 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import DailyOverview from '../components/daily-overview';
+import WeightChart from '../components/weight-chart';
 
 const Home = (): JSX.Element => {
   return (
@@ -13,7 +14,7 @@ const Home = (): JSX.Element => {
             <DailyOverview />
           </View>
           <View style={styles.graphContainer}>
-            <Text style={styles.text}>Hello Graph</Text>
+            <WeightChart />
           </View>
           <View style={styles.fitDetailscontainer}>
             <Text style={styles.text}>Hello Details</Text>
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   graphContainer: {
-    backgroundColor: 'blue',
+    flex: 1,
   },
   fitDetailscontainer: {
     backgroundColor: 'green',

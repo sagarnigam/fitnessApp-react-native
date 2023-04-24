@@ -10,7 +10,7 @@ const Home = (): JSX.Element => {
       <ScrollView>
         <View style={styles.homeContainer}>
           <View style={styles.overviewContainer}>
-            <Text style={styles.text}>Hello Overview</Text>
+            <DailyOverview />
           </View>
           <View style={styles.graphContainer}>
             <Text style={styles.text}>Hello Graph</Text>
@@ -37,14 +37,11 @@ const styles = StyleSheet.create({
   },
   overviewContainer: {
     flex: 1,
-    backgroundColor: 'red',
   },
   graphContainer: {
-    flex: 2,
     backgroundColor: 'blue',
   },
   fitDetailscontainer: {
-    flex: 3,
     backgroundColor: 'green',
   },
   text: {

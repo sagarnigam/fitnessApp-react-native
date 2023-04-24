@@ -2,7 +2,7 @@ import {RoutineInfo} from '../models/routines';
 
 export const ROUTINES: any[] = [
   {
-    id: '1',
+    key: '1',
     name: 'Getting Strong',
     durationWeeks: 4,
     exercise: {
@@ -259,14 +259,14 @@ export const ROUTINES: any[] = [
     estTime: '',
   },
   {
-    id: '2',
+    key: '2',
     name: 'Routine 2',
     durationWeeks: 12,
     exercise: {},
     estTime: '',
   },
   {
-    id: '3',
+    key: '3',
     name: 'Routine 3',
     durationWeeks: 6,
     exercise: [],

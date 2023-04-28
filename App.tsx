@@ -6,7 +6,7 @@ import BottomNavigation from './components/bottom-navigation';
 import {getAuthenticatedUser} from './services/authentication-service';
 
 const App = (): JSX.Element => {
-  getAuthenticatedUser();
+  // getAuthenticatedUser();
   return (
     <>
       <View style={styles.container}>

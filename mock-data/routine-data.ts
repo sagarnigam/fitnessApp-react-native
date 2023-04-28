@@ -198,7 +198,7 @@ export const ROUTINES: any[] = [
       ],
       'Day 6': [
         {
-          name: 'CLose Grip Bench Press',
+          name: 'Close Grip Bench Press',
           type: 'normal',
           description: '2 sets, 20 Reps, 1 min rest',
         },
@@ -270,7 +270,68 @@ export const ROUTINES: any[] = [
           description: 'Rest Day with light stretching',
         },
       ],
-      'Day 8': [],
+      'Day 8': [
+        {
+          name: 'Deadlift ',
+          type: 'normal',
+          description: '2 sets, 20 Reps, 2 min rest',
+        },
+        {
+          name: 'BB Squats (WUP)',
+          type: 'normal',
+          description: '3 sets, 5 Reps, 2 min rest',
+        },
+        {
+          name: 'BB Squats (PR)',
+          type: 'normal',
+          description: '1 sets, 5-10 Reps, 2 min rest',
+        },
+        {
+          name: 'BB Deadlift',
+          type: 'normal',
+          description: '3 sets, 7 Reps, 3 min rest',
+        },
+        {
+          type: 'superset',
+          exercise: [
+            {
+              name: 'Kettlebell Deadlift',
+              type: 'normal',
+              description: '4 sets, 15 Reps, No rest',
+            },
+            {
+              name: 'DB Split Squats',
+              type: 'normal',
+              description: '4 sets, 10 Reps, 2 min rest',
+            },
+          ],
+        },
+        {
+          type: 'gainset',
+          exercise: [
+            {
+              name: 'Leg Curls',
+              type: 'normal',
+              description: '4 sets, 15 Reps, No rest',
+            },
+            {
+              name: 'Goblet Squats',
+              type: 'normal',
+              description: '4 sets, 15 Reps, No rest',
+            },
+            {
+              name: 'Superman',
+              type: 'normal',
+              description: '4 sets, 15 Reps, No rest',
+            },
+            {
+              name: 'Kettlebell windmill',
+              type: 'normal',
+              description: '4 sets, 8 Reps, 2 min rest',
+            },
+          ],
+        },
+      ],
       'Day 9': [
         {
           name: 'Rest Day',
@@ -278,7 +339,63 @@ export const ROUTINES: any[] = [
           description: 'Rest Day with light stretching',
         },
       ],
-      'Day 10': [],
+      'Day 10': [
+        {
+          name: 'Push Ups',
+          type: 'normal',
+          description: '2 sets, 10 - 20 Reps, 2 min rest',
+        },
+        {
+          name: 'BB Bench Press (WUP)',
+          type: 'normal',
+          description: '3 sets, 5 Reps, 2 min rest',
+        },
+        {
+          name: 'BB Bench Press',
+          type: 'normal',
+          description: '3 sets, 5/8/8/8 Reps, 3 min rest',
+        },
+        {
+          type: 'superset',
+          exercise: [
+            {
+              name: 'Seated Shoulder Press',
+              type: 'normal',
+              description: '4 sets, 10 Reps, No rest',
+            },
+            {
+              name: 'DB Row (Both Sides)',
+              type: 'normal',
+              description: '4 sets, 20 Reps, 2 min rest',
+            },
+          ],
+        },
+        {
+          type: 'gainset',
+          exercise: [
+            {
+              name: 'Band Pull Apart',
+              type: 'normal',
+              description: '4 sets, 15 Reps, No rest',
+            },
+            {
+              name: 'Standing Curls',
+              type: 'normal',
+              description: '4 sets, 15 Reps, No rest',
+            },
+            {
+              name: 'Cable Triceps',
+              type: 'normal',
+              description: '4 sets, 15 Reps, No rest',
+            },
+            {
+              name: 'Cable Lateral Raises',
+              type: 'normal',
+              description: '4 sets, 15 Reps, 2 min rest',
+            },
+          ],
+        },
+      ],
       'Day 11': [
         {
           name: 'Rest Day',
@@ -286,8 +403,125 @@ export const ROUTINES: any[] = [
           description: 'Rest Day with light stretching',
         },
       ],
-      'Day 12': [],
-      'Day 13': [],
+      'Day 12': [
+        {
+          name: 'DB Stiff Leg Deadlift',
+          type: 'normal',
+          description: '2 sets, 20 Reps, 2 min rest',
+        },
+        {
+          name: 'BB Deadlift (WUP)',
+          type: 'normal',
+          description: '3 sets, 3-5 Reps, 2 min rest',
+        },
+        {
+          name: 'BB Deadlift',
+          type: 'normal',
+          description: '4 sets, 6 Reps, 3 min rest',
+        },
+        {
+          type: 'superset',
+          exercise: [
+            {
+              name: 'Leg Press',
+              type: 'normal',
+              description: '4 sets, 15 Reps, No rest',
+            },
+            {
+              name: 'BB Good Morning',
+              type: 'normal',
+              description: '4 sets, 10 Reps, 2 min rest',
+            },
+          ],
+        },
+        {
+          type: 'gainset',
+          exercise: [
+            {
+              name: 'Leg Extensions',
+              type: 'normal',
+              description: '3 sets, 15 Reps, No rest',
+            },
+            {
+              name: 'BB Hip Thrust',
+              type: 'normal',
+              description: '3 sets, 15 Reps, No rest',
+            },
+            {
+              name: 'BB Bentover Row',
+              type: 'normal',
+              description: '3 sets, 15 Reps, No rest',
+            },
+            {
+              name: 'Plank',
+              type: 'normal',
+              description: '3 sets, 45 secs, 2 min rest',
+            },
+          ],
+        },
+      ],
+      'Day 13': [
+        {
+          name: 'Close Grip Bench Press',
+          type: 'normal',
+          description: '2 sets, 20 Reps, 2 min rest',
+        },
+        {
+          name: 'BB Bench Press (WUP)',
+          type: 'normal',
+          description: '3 sets, 5 Reps, 2 min rest',
+        },
+        {
+          name: 'BB Bench Press',
+          type: 'normal',
+          description: '4 sets, 5/6/6/6 Reps, 3 min rest',
+        },
+        {
+          type: 'superset',
+          exercise: [
+            {
+              name: 'Military Press',
+              type: 'normal',
+              description: '4 sets, 10 Reps, No rest',
+            },
+            {
+              name: 'DB Lateral Raise',
+              type: 'normal',
+              description: '4 sets, 20 Reps, 2 min rest',
+            },
+          ],
+        },
+        {
+          type: 'gainset',
+          exercise: [
+            {
+              name: 'DB Incline Press',
+              type: 'normal',
+              description: '4 sets, 15 Reps, No rest',
+            },
+            {
+              name: 'Lat Pull Down',
+              type: 'normal',
+              description: '4 sets, 15 Reps, No rest',
+            },
+            {
+              name: 'Band Pull Apart',
+              type: 'normal',
+              description: '4 sets, 15 Reps, No rest',
+            },
+            {
+              name: 'Cable Push Down',
+              type: 'normal',
+              description: '4 sets, 15 Reps, No rest',
+            },
+            {
+              name: 'Alternating Hammer Curls',
+              type: 'normal',
+              description: '4 sets, 15 Reps, 2 min rest',
+            },
+          ],
+        },
+      ],
       'Day 14': [
         {
           name: 'Rest Day',

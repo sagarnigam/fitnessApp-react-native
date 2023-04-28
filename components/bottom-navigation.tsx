@@ -16,7 +16,7 @@ import {
   HOME_ROUTE_NAME,
   NEWS_ROUTE_NAME,
   ROUTINES_ROUTE_NAME,
-} from '../constanst/route-names';
+} from '../constant/route-names';
 import MyRoutineNavigationStack from './routine-navigation-stack';
 
 // icons

@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#09131F',
     flexDirection: 'column',
     paddingTop: 100,
-    paddingBottom: 70,
+    paddingBottom: 56,
   },
   text: {
     fontSize: 24,

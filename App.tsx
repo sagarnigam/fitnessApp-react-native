@@ -28,12 +28,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#09131F',
   },
   scrollarea: {
-    flex: 11,
-  },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#333',
+    flex: 1,
   },
 });
 

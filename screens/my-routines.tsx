@@ -40,11 +40,6 @@ const styles = StyleSheet.create({
   scrollContainer: {
     width: '100%',
   },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: 'white',
-  },
 });
 
 export default MyRoutines;

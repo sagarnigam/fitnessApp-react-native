@@ -13,6 +13,7 @@ const MyRoutineNavigationStack = (): JSX.Element => {
       initialRouteName="routines"
       screenOptions={{
         headerShown: false,
+        animation: 'none',
       }}>
       <Stack.Screen name="routines" component={MyRoutines} />
       <Stack.Screen name="routineSchedule" component={RoutineSchedule} />

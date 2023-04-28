@@ -13,12 +13,12 @@ const Home = (): JSX.Element => {
           <View style={styles.overviewContainer}>
             <DailyOverview />
           </View>
-          <View style={styles.graphContainer}>
+          {/* <View style={styles.graphContainer}>
             <WeightChart />
           </View>
           <View style={styles.fitDetailscontainer}>
             <Text style={styles.text}>Hello Details</Text>
-          </View>
+          </View> */}
         </View>
       </ScrollView>
     </View>
@@ -44,11 +44,6 @@ const styles = StyleSheet.create({
   },
   fitDetailscontainer: {
     backgroundColor: 'green',
-  },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: 'white',
   },
 });
 

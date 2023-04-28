@@ -18,7 +18,7 @@ const RoutineDetailsWidget = ({routineDetails}): JSX.Element => {
         </View>
         <View style={styles.timeContainer}>
           <Text style={styles.detailsText}>Calories</Text>
-          <Text style={styles.valueText}>250</Text>
+          <Text style={styles.valueText}>250 cal</Text>
         </View>
       </View>
     </View>
@@ -30,42 +30,44 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#A9A9A930',
     margin: 8,
+    marginBottom: 4,
+    marginTop: 4,
     flexDirection: 'column',
-    padding: 10,
+    padding: 8,
+    paddingBottom: 6,
     borderRadius: 15,
   },
   text: {
-    fontSize: 24,
+    fontSize: 18,
     fontWeight: 'bold',
     color: 'white',
   },
   headingContainer: {
     flex: 1,
-    paddingLeft: 10,
-    paddingTop: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   detailsContainer: {
     flex: 2,
     flexDirection: 'row',
+    padding: 8,
   },
   volumeContainer: {
     flex: 1,
-    margin: 8,
     justifyContent: 'center',
     alignItems: 'center',
   },
   timeContainer: {
     flex: 1,
-    margin: 8,
     justifyContent: 'center',
     alignItems: 'center',
   },
   detailsText: {
-    fontSize: 14,
+    fontSize: 10,
     color: '#ffffff80',
   },
   valueText: {
-    fontSize: 18,
+    fontSize: 14,
     color: 'white',
   },
 });

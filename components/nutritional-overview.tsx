@@ -6,15 +6,15 @@ const NutritionalOverview = (): JSX.Element => {
     <View style={styles.container}>
       <View style={styles.volumeContainer}>
         <Text style={styles.detailsText}>Protien</Text>
-        <Text style={styles.valueText}>165</Text>
+        <Text style={styles.valueText}>165 g</Text>
       </View>
       <View style={styles.volumeContainer}>
-        <Text style={styles.detailsText}>Carbs</Text>
-        <Text style={styles.valueText}>100</Text>
+        <Text style={styles.detailsText}>Carbohydrates</Text>
+        <Text style={styles.valueText}>100 g</Text>
       </View>
       <View style={styles.volumeContainer}>
         <Text style={styles.detailsText}>Fats</Text>
-        <Text style={styles.valueText}>100</Text>
+        <Text style={styles.valueText}>100 g</Text>
       </View>
     </View>
   );
@@ -27,13 +27,9 @@ const styles = StyleSheet.create({
     margin: 8,
     marginTop: 0,
     flexDirection: 'row',
-    padding: 5,
+    padding: 3,
+    paddingBottom: 5,
     borderRadius: 15,
-  },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: 'white',
   },
   volumeContainer: {
     flex: 1,
@@ -42,11 +38,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   detailsText: {
-    fontSize: 16,
+    fontSize: 10,
     color: '#ffffff80',
   },
   valueText: {
-    fontSize: 18,
+    fontSize: 14,
     color: 'white',
   },
 });

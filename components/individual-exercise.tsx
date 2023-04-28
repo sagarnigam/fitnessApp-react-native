@@ -39,26 +39,16 @@ const styles = StyleSheet.create({
     margin: 8,
     borderRadius: 15,
   },
-  container: {
-    flex: 20,
-    backgroundColor: '#A9A9A930',
-    margin: 8,
-    flexDirection: 'column',
-    padding: 10,
-    borderRadius: 15,
-  },
   text: {
-    fontSize: 20,
+    fontSize: 14,
     color: 'white',
   },
   headingContainer: {
     flex: 1,
-    paddingLeft: 10,
-    paddingTop: 5,
     alignItems: 'center',
   },
   setDetailsContainer: {
-    paddingTop: 10,
+    paddingTop: 8,
     flex: 2,
     flexDirection: 'column',
   },
@@ -66,10 +56,10 @@ const styles = StyleSheet.create({
     width: '100%',
     flex: 1,
     flexDirection: 'row',
-    marginBottom: 7,
+    marginBottom: 6,
   },
   setDetailsText: {
-    fontSize: 18,
+    fontSize: 10,
     color: '#ffffff80',
   },
   setDetailsSubContainer: {

@@ -45,7 +45,7 @@ const BottomNavigation = (): JSX.Element => {
       } else if (route.name === 'news') {
         iconName = newsIcon;
       }
-      return <Image source={iconName} style={{width: 25, height: 25}} />;
+      return <Image source={iconName} style={{width: 20, height: 20}} />;
     },
     tabBarShowLabel: false,
     tabBarStyle: styles.bottomNavigation,
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 0,
     backgroundColor: '#09131F',
-    height: 60,
+    height: 50,
   },
   text: {
     color: 'white',

@@ -13,15 +13,15 @@ const DailyOverview = (): JSX.Element => {
         <View style={styles.detailsContainer}>
           <View style={styles.volumeContainer}>
             <Text style={styles.detailsText}>Target</Text>
-            <Text style={styles.valueText}>2800</Text>
+            <Text style={styles.valueText}>2800 cal</Text>
           </View>
           <View style={styles.timeContainer}>
             <Text style={styles.detailsText}>Consumed</Text>
-            <Text style={styles.valueText}>1850</Text>
+            <Text style={styles.valueText}>1850 cal</Text>
           </View>
           <View style={styles.timeContainer}>
             <Text style={styles.detailsText}>Remaining</Text>
-            <Text style={styles.valueText}>950</Text>
+            <Text style={styles.valueText}>950 cal</Text>
           </View>
         </View>
       </View>
@@ -37,18 +37,19 @@ const styles = StyleSheet.create({
     margin: 8,
     marginBottom: 0,
     flexDirection: 'column',
-    padding: 10,
+    padding: 8,
     borderRadius: 15,
   },
   text: {
-    fontSize: 24,
+    fontSize: 18,
     fontWeight: 'bold',
     color: 'white',
   },
   headingContainer: {
     flex: 1,
-    paddingLeft: 10,
-    paddingTop: 5,
+    paddingTop: 2,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   detailsContainer: {
     flex: 2,
@@ -67,11 +68,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   detailsText: {
-    fontSize: 18,
+    fontSize: 10,
     color: '#ffffff80',
   },
   valueText: {
-    fontSize: 21,
+    fontSize: 14,
     color: 'white',
   },
 });

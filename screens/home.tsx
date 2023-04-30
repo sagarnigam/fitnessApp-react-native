@@ -1,8 +1,8 @@
-import {Text} from '@rneui/base';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import DailyOverview from '../components/daily-overview';
+import FitDetails from '../components/google-fit-details';
 import WeightChart from '../components/weight-chart';
 
 const Home = (): JSX.Element => {
@@ -15,10 +15,10 @@ const Home = (): JSX.Element => {
           </View>
           {/* <View style={styles.graphContainer}>
             <WeightChart />
-          </View>
-          <View style={styles.fitDetailscontainer}>
-            <Text style={styles.text}>Hello Details</Text>
           </View> */}
+          <View style={styles.fitDetailscontainer}>
+            <FitDetails />
+          </View>
         </View>
       </ScrollView>
     </View>
@@ -42,9 +42,7 @@ const styles = StyleSheet.create({
   graphContainer: {
     flex: 1,
   },
-  fitDetailscontainer: {
-    backgroundColor: 'green',
-  },
+  fitDetailscontainer: {},
 });
 
 export default Home;

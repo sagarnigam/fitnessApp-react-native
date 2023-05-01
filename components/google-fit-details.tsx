@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     marginBottom: 0,
   },
   text: {
-    fontSize: 18,
+    fontSize: 16,
     color: 'white',
     fontWeight: 'bold',
   },
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     flex: 4,
     backgroundColor: '#319AE5',
     borderRadius: 15,
-    padding: 15,
+    padding: 12,
     marginRight: 3,
   },
   waterDetails: {
@@ -73,9 +73,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#4FE54C',
     borderRadius: 15,
-    padding: 15,
+    padding: 12,
     marginBottom: 3,
     flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   stepDetails: {
     marginLeft: 17,
@@ -88,9 +90,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#EE4B4B',
     borderRadius: 15,
-    padding: 15,
+    padding: 12,
     marginTop: 3,
     flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   hateRateText: {
     fontSize: 35,

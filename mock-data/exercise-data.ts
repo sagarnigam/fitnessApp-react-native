@@ -1,3 +1,42 @@
+export const BODY_PARTS: any[] = [
+  {
+    key: '1',
+    name: 'Chest',
+  },
+  {
+    key: '2',
+    name: 'Back',
+  },
+  {
+    key: '3',
+    name: 'Biceps',
+  },
+  {
+    key: '4',
+    name: 'Triceps',
+  },
+  {
+    key: '5',
+    name: 'Glutes',
+  },
+  {
+    key: '6',
+    name: 'Hamstrings',
+  },
+  {
+    key: '7',
+    name: 'Quads',
+  },
+  {
+    key: '8',
+    name: 'Calfs',
+  },
+  {
+    key: '9',
+    name: 'Shoulders',
+  },
+];
+
 export const EXERCISES = {
   chest: [
     {

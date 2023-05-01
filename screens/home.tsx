@@ -13,9 +13,9 @@ const Home = (): JSX.Element => {
           <View style={styles.overviewContainer}>
             <DailyOverview />
           </View>
-          {/* <View style={styles.graphContainer}>
+          <View style={styles.graphContainer}>
             <WeightChart />
-          </View> */}
+          </View>
           <View style={styles.fitDetailscontainer}>
             <FitDetails />
           </View>

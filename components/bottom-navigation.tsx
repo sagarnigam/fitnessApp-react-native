@@ -69,7 +69,7 @@ const BottomNavigation = (): JSX.Element => {
         name={ROUTINES_ROUTE_NAME}
         component={MyRoutineNavigationStack}
         options={{
-          headerTitle: 'My Routines',
+          headerTitle: 'Workout Home',
           headerTitleStyle: styles.headerTitle,
           headerTransparent: true,
           headerRight: () => <Profile />,

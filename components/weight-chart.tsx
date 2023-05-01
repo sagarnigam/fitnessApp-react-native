@@ -3,7 +3,7 @@ import {StyleSheet, Text, View} from 'react-native';
 const WeightChart = (): JSX.Element => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Hello to WeightChart</Text>
+      <Text style={styles.text}>Hello to Weight Chart</Text>
     </View>
   );
 };

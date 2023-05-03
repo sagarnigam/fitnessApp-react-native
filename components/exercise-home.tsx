@@ -4,19 +4,19 @@ import {
   Text,
   View,
   Animated,
-  Button,
-  Pressable,
+  TouchableOpacity,
+  ImageBackground,
 } from 'react-native';
 import {BODY_PARTS} from '../mock-data/exercise-data';
 
 const gluteIcon = require('../assets/glutes.png');
 
-const ExerciseHome = (): JSX.Element => {
+const ExerciseHome = ({navigation}): JSX.Element => {
   const scrollY = React.useRef(new Animated.Value(0)).current;
-  const ITEMSIZE = 84;
+  const ITEMSIZE = 150;
 
-  const onPress = () => {
-    console.log('button Pressed');
+  const navigateTo = (): void => {
+    navigation.navigate('routines');
   };
 
   return (
@@ -59,23 +59,28 @@ const ExerciseHome = (): JSX.Element => {
                   styles.exercisePill,
                   {transform: [{scale}], opacity: opacity},
                 ]}>
-                <Text style={styles.text}>Test </Text>
+                <ImageBackground
+                  source={gluteIcon}
+                  resizeMode="cover"
+                  style={styles.image}>
+                  <Text style={styles.text}>{item.name}</Text>
+                </ImageBackground>
               </Animated.View>
             );
           }}
         />
       </View>
       <View style={styles.buttonsContainer}>
-        <Pressable
+        <TouchableOpacity
           style={[styles.button, {backgroundColor: '#319AE5'}]}
-          onPress={onPress}>
-          <Text style={styles.buttonText}>My Routines</Text>
-        </Pressable>
-        <Pressable
-          style={[styles.button, {backgroundColor: '#E44040'}]}
-          onPress={onPress}>
+          onPress={() => navigateTo()}>
           <Text style={styles.buttonText}>Build Workout Routine</Text>
-        </Pressable>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.button, {backgroundColor: '#E44040'}]}
+          onPress={() => navigateTo()}>
+          <Text style={styles.buttonText}>Build Workout Routine</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -104,9 +109,7 @@ const styles = StyleSheet.create({
   },
   exercisePill: {
     backgroundColor: 'pink',
-    height: 70,
-    justifyContent: 'center',
-    alignItems: 'center',
+    height: 130,
     borderRadius: 15,
     margin: 4,
   },
@@ -120,6 +123,12 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 16,
     color: 'white',
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 15,
   },
 });
 

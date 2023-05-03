@@ -35,6 +35,10 @@ export const BODY_PARTS: any[] = [
     key: '9',
     name: 'Shoulders',
   },
+  {
+    key: '10',
+    name: 'Core',
+  },
 ];
 
 export const EXERCISES = {

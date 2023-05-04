@@ -1,84 +1,40 @@
 import React from 'react';
 import {
+  ImageBackground,
   StyleSheet,
   Text,
-  View,
-  Animated,
   TouchableOpacity,
-  ImageBackground,
+  View,
 } from 'react-native';
-import {BODY_PARTS} from '../mock-data/exercise-data';
 
 const gluteIcon = require('../assets/glutes.png');
 
-const ExerciseHome = ({navigation}): JSX.Element => {
-  const scrollY = React.useRef(new Animated.Value(0)).current;
-  const ITEMSIZE = 150;
-
-  const navigateTo = (): void => {
-    navigation.navigate('routines');
+const ExerciseHome = ({navigation}) => {
+  const navigateTo = (page: string) => {
+    navigation.navigate(page);
   };
 
   return (
     <View style={styles.container}>
       <View style={styles.listContainer}>
-        <Animated.FlatList
-          data={BODY_PARTS}
-          keyExtractor={item => item.key}
-          onScroll={Animated.event(
-            [{nativeEvent: {contentOffset: {y: scrollY}}}],
-            {useNativeDriver: true},
-          )}
-          contentContainerStyle={{
-            padding: 4,
-          }}
-          renderItem={({item, index}) => {
-            const inputRange = [
-              -1,
-              0,
-              ITEMSIZE * index,
-              ITEMSIZE * (index + 2),
-            ];
-            const opacityInputRange = [
-              -1,
-              0,
-              ITEMSIZE * index,
-              ITEMSIZE * (index + 1),
-            ];
-            const scale = scrollY.interpolate({
-              inputRange,
-              outputRange: [1, 1, 1, 0],
-            });
-            const opacity = scrollY.interpolate({
-              inputRange: opacityInputRange,
-              outputRange: [1, 1, 1, 0],
-            });
-            return (
-              <Animated.View
-                style={[
-                  styles.exercisePill,
-                  {transform: [{scale}], opacity: opacity},
-                ]}>
-                <ImageBackground
-                  source={gluteIcon}
-                  resizeMode="cover"
-                  style={styles.image}>
-                  <Text style={styles.text}>{item.name}</Text>
-                </ImageBackground>
-              </Animated.View>
-            );
-          }}
-        />
+        <View style={[styles.exercisePill]}>
+          <ImageBackground
+            source={gluteIcon}
+            resizeMode="cover"
+            style={styles.image}>
+            <Text style={styles.text}>Glutes</Text>
+          </ImageBackground>
+        </View>
       </View>
       <View style={styles.buttonsContainer}>
         <TouchableOpacity
           style={[styles.button, {backgroundColor: '#319AE5'}]}
-          onPress={() => navigateTo()}>
-          <Text style={styles.buttonText}>Build Workout Routine</Text>
+          onPress={() => navigateTo('routines')}>
+          <Text style={styles.buttonText}>My Routines</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.button, {backgroundColor: '#E44040'}]}
-          onPress={() => navigateTo()}>
+          onPress={() => navigateTo('workout-build')}>
           <Text style={styles.buttonText}>Build Workout Routine</Text>
         </TouchableOpacity>
       </View>

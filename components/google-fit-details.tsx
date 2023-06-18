@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
   waterContainer: {
     flex: 4,
-    backgroundColor: '#319AE5',
+    backgroundColor: '#319AE590',
     borderRadius: 15,
     padding: 12,
     marginRight: 3,
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   },
   stepsContainer: {
     flex: 1,
-    backgroundColor: '#4FE54C',
+    backgroundColor: '#4FE54C90',
     borderRadius: 15,
     padding: 12,
     marginBottom: 3,
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
   },
   heartrateContainer: {
     flex: 1,
-    backgroundColor: '#EE4B4B',
+    backgroundColor: '#EE4B4B90',
     borderRadius: 15,
     padding: 12,
     marginTop: 3,

@@ -14,7 +14,7 @@ const Home = (): JSX.Element => {
             <DailyOverview />
           </View>
           <View style={styles.graphContainer}>
-            <WeightChart />
+            {/* <WeightChart /> */}
           </View>
           <View style={styles.fitDetailscontainer}>
             <FitDetails />
@@ -28,7 +28,7 @@ const Home = (): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 100,
+    paddingTop: 70,
     paddingBottom: 70,
     backgroundColor: '#09131F',
   },

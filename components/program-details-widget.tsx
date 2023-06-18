@@ -1,31 +1,30 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
-import NutritionalOverview from './nutritional-overview';
 
-const DailyOverview = (): JSX.Element => {
+const ProgramOverviewWidget = ({programDetails}): JSX.Element => {
+
   return (
     <GestureHandlerRootView style={{flex: 1}}>
       <View style={styles.container}>
         <View style={styles.headingContainer}>
-          <Text style={styles.text}>Today's Calories</Text>
+          <Text style={styles.text}>{programDetails.name}</Text>
         </View>
         <View style={styles.detailsContainer}>
           <View style={styles.volumeContainer}>
-            <Text style={styles.detailsText}>Target</Text>
-            <Text style={styles.valueText}>2800 cal</Text>
+            <Text style={styles.detailsText}>Volume</Text>
+            <Text style={styles.valueText}>450 Kg</Text>
           </View>
           <View style={styles.timeContainer}>
-            <Text style={styles.detailsText}>Consumed</Text>
-            <Text style={styles.valueText}>1850 cal</Text>
+            <Text style={styles.detailsText}>Est. Time</Text>
+            <Text style={styles.valueText}>45 min</Text>
           </View>
           <View style={styles.timeContainer}>
-            <Text style={styles.detailsText}>Remaining</Text>
-            <Text style={styles.valueText}>950 cal</Text>
+            <Text style={styles.detailsText}>Calories</Text>
+            <Text style={styles.valueText}>250 cal</Text>
           </View>
         </View>
       </View>
-      <NutritionalOverview />
     </GestureHandlerRootView>
   );
 };
@@ -77,4 +76,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DailyOverview;
+export default ProgramOverviewWidget;

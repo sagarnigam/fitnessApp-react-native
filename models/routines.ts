@@ -1,5 +1,7 @@
+import {Key} from 'react';
+
 export interface RoutineInfo {
-  id: string;
+  key: string;
   name: string;
   durationWeeks: number;
   exercise: any;

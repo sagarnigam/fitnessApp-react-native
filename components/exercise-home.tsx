@@ -9,7 +9,7 @@ import {
 
 const gluteIcon = require('../assets/glutes.png');
 
-const ExerciseHome = ({navigation}) => {
+const WorkoutHome = ({navigation}) => {
   const navigateTo = (page: string) => {
     navigation.navigate(page);
   };
@@ -17,25 +17,25 @@ const ExerciseHome = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.listContainer}>
-        <View style={[styles.exercisePill]}>
+        {/* <View style={[styles.exercisePill]}>
           <ImageBackground
             source={gluteIcon}
             resizeMode="cover"
             style={styles.image}>
             <Text style={styles.text}>Glutes</Text>
           </ImageBackground>
-        </View>
+        </View> */}
       </View>
       <View style={styles.buttonsContainer}>
         <TouchableOpacity
           style={[styles.button, {backgroundColor: '#319AE5'}]}
-          onPress={() => navigateTo('routines')}>
-          <Text style={styles.buttonText}>My Routines</Text>
+          onPress={() => navigateTo('my-programs')}>
+          <Text style={styles.buttonText}>My Programs</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.button, {backgroundColor: '#E44040'}]}
           onPress={() => navigateTo('workout-build')}>
-          <Text style={styles.buttonText}>Build Workout Routine</Text>
+          <Text style={styles.buttonText}>Build Workout Program</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -45,7 +45,7 @@ const ExerciseHome = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 100,
+    paddingTop: 70,
     paddingBottom: 70,
     backgroundColor: '#09131F',
     flexDirection: 'column',
@@ -70,14 +70,14 @@ const styles = StyleSheet.create({
     margin: 4,
   },
   button: {
-    height: 50,
+    height: 40,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 15,
     marginBottom: 6,
   },
   buttonText: {
-    fontSize: 16,
+    fontSize: 14,
     color: 'white',
   },
   image: {
@@ -88,4 +88,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ExerciseHome;
+export default WorkoutHome;

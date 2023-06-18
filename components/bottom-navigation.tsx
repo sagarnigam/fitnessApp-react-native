@@ -4,10 +4,8 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 // Screens
 import Home from '../screens/home';
-import MyRoutines from '../screens/my-routines';
 import News from '../screens/news';
 import AddScreen from '../screens/addScreen';
-import Profile from '../shared/profile';
 
 // Constants
 import {
@@ -15,9 +13,10 @@ import {
   GROCERIES_ROUTE_NAME,
   HOME_ROUTE_NAME,
   NEWS_ROUTE_NAME,
-  ROUTINES_ROUTE_NAME,
+  WORKOUTS_ROUTE_NAME,
 } from '../constant/route-names';
-import MyRoutineNavigationStack from './routine-navigation-stack';
+import WorkoutNavigationStack from './routine-navigation-stack';
+import WorkoutHome from '../screens/program-home';
 
 // icons
 
@@ -36,7 +35,7 @@ const BottomNavigation = (): JSX.Element => {
 
       if (route.name === 'home') {
         iconName = homeIcon;
-      } else if (route.name === 'routines') {
+      } else if (route.name === 'workouts') {
         iconName = excerciseIcon;
       } else if (route.name === 'button') {
         iconName = buttonIcon;
@@ -62,17 +61,15 @@ const BottomNavigation = (): JSX.Element => {
           headerTitle: 'Hello Sagar',
           headerTitleStyle: styles.headerTitle,
           headerTransparent: true,
-          headerRight: () => <Profile />,
         }}
       />
       <Tab.Screen
-        name={ROUTINES_ROUTE_NAME}
-        component={MyRoutineNavigationStack}
+        name={WORKOUTS_ROUTE_NAME}
+        component={WorkoutNavigationStack}
         options={{
           headerTitle: 'Workout Home',
           headerTitleStyle: styles.headerTitle,
           headerTransparent: true,
-          headerRight: () => <Profile />,
         }}
       />
       <Tab.Screen
@@ -82,17 +79,15 @@ const BottomNavigation = (): JSX.Element => {
           headerTitle: 'Add Exercise',
           headerTitleStyle: styles.headerTitle,
           headerTransparent: true,
-          headerRight: () => <Profile />,
         }}
       />
       <Tab.Screen
         name={GROCERIES_ROUTE_NAME}
-        component={MyRoutines}
+        component={WorkoutHome}
         options={{
           headerTitle: 'Grocery List',
           headerTitleStyle: styles.headerTitle,
           headerTransparent: true,
-          headerRight: () => <Profile />,
         }}
       />
       <Tab.Screen
@@ -102,7 +97,6 @@ const BottomNavigation = (): JSX.Element => {
           headerTitle: 'News',
           headerTitleStyle: styles.headerTitle,
           headerTransparent: true,
-          headerRight: () => <Profile />,
         }}
       />
     </Tab.Navigator>
@@ -136,7 +130,7 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     color: 'white',
-    fontSize: 35,
+    fontSize: 25,
   },
 });
 

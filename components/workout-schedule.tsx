@@ -3,13 +3,13 @@ import {StyleSheet, ScrollView, View} from 'react-native';
 import {Divider} from '@rneui/themed';
 
 import ExerciseDetailsWidget from './exercise-details-widgets';
-import RoutineDetailsWidget from './routine-details-widget';
+import ProgramOverviewWidget from './program-details-widget';
 
 const WorkoutSchedule = (props): JSX.Element => {
   return (
     <View style={styles.container}>
       <View style={styles.detailsContainer}>
-        <RoutineDetailsWidget routineDetails={props.route.params.props} />
+        <ProgramOverviewWidget programDetails={props.route.params.props} />
       </View>
       <Divider inset={true} insetType="middle" />
       <View style={styles.daysContainer}>

@@ -8,9 +8,9 @@ const Profile = (): JSX.Element => {
 
 const styles = StyleSheet.create({
   icon: {
-    width: 50,
-    height: 50,
-    marginRight: '5%',
+    width: 30,
+    height: 30,
+    marginRight: '10%',
     marginTop: '5%',
   },
 });

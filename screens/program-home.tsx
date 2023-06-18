@@ -1,14 +1,21 @@
 import React, {useEffect, useState} from 'react';
-import {ScrollView, StyleSheet, View, TouchableOpacity} from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  View,
+  TouchableOpacity,
+  Pressable,
+  Text,
+} from 'react-native';
+import ProgramOverviewWidget from '../components/program-details-widget';
 
-import RoutineDetailsWidget from '../components/routine-details-widget';
 import {RoutineInfo} from '../models/routines';
 import {getRoutineData} from '../services/routine-service';
 
-const MyRoutines = ({navigation}): JSX.Element => {
+const ProgramHome = ({navigation}): JSX.Element => {
   const [routineData, setRoutineData] = useState<RoutineInfo[]>([]);
 
-  const navigateTo = (item): void => {
+  const navigateTo = (item: RoutineInfo): void => {
     navigation.navigate('routineSchedule', item);
   };
 
@@ -19,11 +26,7 @@ const MyRoutines = ({navigation}): JSX.Element => {
   return (
     <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
-        {routineData.map(item => (
-          <TouchableOpacity onPress={() => navigateTo(item)}>
-            <RoutineDetailsWidget routineDetails={item} />
-          </TouchableOpacity>
-        ))}
+        <Text>kshdkjsadjkasdhk</Text>
       </ScrollView>
     </View>
   );
@@ -34,7 +37,7 @@ const styles = StyleSheet.create({
     width: '100%',
     flex: 1,
     backgroundColor: '#09131F',
-    paddingTop: 100,
+    paddingTop: 70,
     paddingBottom: 70,
   },
   scrollContainer: {
@@ -42,4 +45,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MyRoutines;
+export default ProgramHome;

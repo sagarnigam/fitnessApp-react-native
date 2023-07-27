@@ -3,11 +3,14 @@ import {StyleSheet, Image} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 // Screens
-import Home from '../screens/home';
+import Home from '../../screens/home';
 
 // Constants
-import {HOME_ROUTE_NAME, ROUTINES_ROUTE_NAME} from '../constant/route-names';
-import MyRoutineNavigationStack from './routine-navigation-stack';
+import {
+  HOME_ROUTE_NAME,
+  WORKOUT_HOME_ROUTE_NAME,
+} from '../../constant/route-names';
+import WorkoutHomeNavigationStack from './workout-home-navigation-stack';
 
 // icons
 
@@ -19,23 +22,13 @@ const Tab = createBottomTabNavigator();
 const BottomNavigation = (): JSX.Element => {
   const screenOptions = ({route}) => ({
     // eslint-disable-next-line react/no-unstable-nested-components
-    tabBarIcon: () => {
-      let iconName;
-
-      if (route.name === 'home') {
-        iconName = homeIcon;
-      } else if (route.name === 'routines') {
-        iconName = excerciseIcon;
-      }
-      return <Image source={iconName} style={{width: 20, height: 20}} />;
-    },
     tabBarShowLabel: false,
     tabBarStyle: styles.bottomNavigation,
   });
 
   const commonRouteOptions = {
     headerTransparent: true,
-    title: false,
+    title: '',
   };
 
   return (
@@ -48,8 +41,8 @@ const BottomNavigation = (): JSX.Element => {
         options={commonRouteOptions}
       />
       <Tab.Screen
-        name={ROUTINES_ROUTE_NAME}
-        component={MyRoutineNavigationStack}
+        name={WORKOUT_HOME_ROUTE_NAME}
+        component={WorkoutHomeNavigationStack}
         options={commonRouteOptions}
       />
     </Tab.Navigator>

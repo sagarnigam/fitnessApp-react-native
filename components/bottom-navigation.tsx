@@ -35,6 +35,7 @@ const BottomNavigation = (): JSX.Element => {
 
   const commonRouteOptions = {
     headerTransparent: true,
+    title: false,
   };
 
   return (

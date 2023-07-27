@@ -8,20 +8,20 @@ const DailyOverview = (): JSX.Element => {
     <GestureHandlerRootView style={{flex: 1}}>
       <View style={styles.container}>
         <View style={styles.headingContainer}>
-          <Text style={styles.text}>Today's Calories</Text>
+          <Text style={styles.headingLg}>Today's Calories</Text>
         </View>
         <View style={styles.detailsContainer}>
           <View style={styles.volumeContainer}>
-            <Text style={styles.detailsText}>Target</Text>
-            <Text style={styles.valueText}>2800 cal</Text>
+            <Text style={styles.headingSm}>Target</Text>
+            <Text style={styles.headingMd}>2800 cal</Text>
           </View>
           <View style={styles.timeContainer}>
-            <Text style={styles.detailsText}>Consumed</Text>
-            <Text style={styles.valueText}>1850 cal</Text>
+            <Text style={styles.headingSm}>Consumed</Text>
+            <Text style={styles.headingMd}>1850 cal</Text>
           </View>
           <View style={styles.timeContainer}>
-            <Text style={styles.detailsText}>Remaining</Text>
-            <Text style={styles.valueText}>950 cal</Text>
+            <Text style={styles.headingSm}>Remaining</Text>
+            <Text style={styles.headingMd}>950 cal</Text>
           </View>
         </View>
       </View>
@@ -37,11 +37,11 @@ const styles = StyleSheet.create({
     margin: 8,
     marginBottom: 0,
     flexDirection: 'column',
-    padding: 8,
+    padding: 5,
     borderRadius: 15,
   },
-  text: {
-    fontSize: 18,
+  headingLg: {
+    fontSize: 16,
     fontWeight: 'bold',
     color: 'white',
   },
@@ -67,11 +67,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  detailsText: {
+  headingSm: {
     fontSize: 10,
     color: '#ffffff80',
   },
-  valueText: {
+  headingMd: {
     fontSize: 14,
     color: 'white',
   },

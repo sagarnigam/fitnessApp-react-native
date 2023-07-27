@@ -1,9 +1,10 @@
+import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
-const Header = (): JSX.Element => {
+const Header = (props): JSX.Element => {
   return (
     <View style={styles.headerContainer}>
-      <Text style={styles.headerText}>Hello Sagar</Text>
+      <Text style={styles.headerText}>{props.headerText}</Text>
     </View>
   );
 };

@@ -5,11 +5,13 @@ import DailyOverview from '../components/daily-overview';
 import Header from '../components/header';
 
 const Home = (): JSX.Element => {
+  const headerText = 'Hello Sagar';
+
   return (
     <View style={styles.container}>
       <ScrollView>
         <View style={styles.homeContainer}>
-          <Header />
+          <Header headerText={headerText} />
           <View style={styles.overviewContainer}>
             <DailyOverview />
           </View>

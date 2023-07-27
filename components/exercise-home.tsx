@@ -6,16 +6,19 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import Header from './header';
 
 const gluteIcon = require('../assets/glutes.png');
 
 const ExerciseHome = ({navigation}) => {
+  const headerText = 'Workout Home';
   const navigateTo = (page: string) => {
     navigation.navigate(page);
   };
 
   return (
     <View style={styles.container}>
+      <Header headerText={headerText} />
       <View style={styles.listContainer}>
         <View style={[styles.exercisePill]}>
           <ImageBackground
@@ -45,8 +48,7 @@ const ExerciseHome = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 100,
-    paddingBottom: 70,
+    paddingBottom: 55,
     backgroundColor: '#09131F',
     flexDirection: 'column',
   },

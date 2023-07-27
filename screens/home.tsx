@@ -2,8 +2,6 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import DailyOverview from '../components/daily-overview';
-import FitDetails from '../components/google-fit-details';
-import WeightChart from '../components/weight-chart';
 
 const Home = (): JSX.Element => {
   return (
@@ -13,12 +11,8 @@ const Home = (): JSX.Element => {
           <View style={styles.overviewContainer}>
             <DailyOverview />
           </View>
-          <View style={styles.graphContainer}>
-            <WeightChart />
-          </View>
-          <View style={styles.fitDetailscontainer}>
-            <FitDetails />
-          </View>
+          <View style={styles.graphContainer}>{/* <WeightChart /> */}</View>
+          <View style={styles.fitDetailscontainer}>{/* <FitDetails /> */}</View>
         </View>
       </ScrollView>
     </View>

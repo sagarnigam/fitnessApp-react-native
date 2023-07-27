@@ -23,7 +23,6 @@ const App = (): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 5,
     flexDirection: 'column',
     backgroundColor: '#09131F',
   },

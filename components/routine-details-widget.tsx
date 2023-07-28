@@ -29,18 +29,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#A9A9A930',
-    margin: 8,
-    marginBottom: 4,
-    marginTop: 4,
     flexDirection: 'column',
-    padding: 8,
-    paddingBottom: 6,
     borderRadius: 15,
+    padding: 5,
+    marginBottom: 7,
   },
   text: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: 'bold',
     color: 'white',
+    height: 25,
   },
   headingContainer: {
     flex: 1,
@@ -67,7 +65,7 @@ const styles = StyleSheet.create({
     color: '#ffffff80',
   },
   valueText: {
-    fontSize: 14,
+    fontSize: 12,
     color: 'white',
   },
 });

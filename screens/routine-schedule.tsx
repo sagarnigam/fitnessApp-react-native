@@ -4,18 +4,19 @@ import {Divider} from '@rneui/themed';
 
 import WorkoutDay from '../components/workout-day';
 import RoutineDetailsWidget from '../components/routine-details-widget';
+import Header from '../components/header';
 
 const RoutineSchedule = (props): JSX.Element => {
+  const headerText = 'Routines';
   const navigateTo = (item): void => {
     props.navigation.navigate('workoutSchedule', item);
   };
 
   return (
     <View style={styles.container}>
-      <View style={styles.detailsContainer}>
-        <RoutineDetailsWidget routineDetails={props.route.params} />
-      </View>
-      <Divider inset={true} insetType="middle" />
+      <Header headerText={headerText} />
+      <RoutineDetailsWidget routineDetails={props.route.params} />
+      <Divider style={styles.divider} inset={true} insetType="middle" />
       <View style={styles.daysContainer}>
         <ScrollView>
           {Object.keys(props.route.params.exercise).map(item => (
@@ -34,22 +35,22 @@ const RoutineSchedule = (props): JSX.Element => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#09131F',
     flexDirection: 'column',
-    paddingTop: 100,
-    paddingBottom: 56,
-  },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: 'white',
+    height: '100%',
+    paddingLeft: 15,
+    paddingRight: 15,
+    paddingBottom: 70,
   },
   detailsContainer: {
     flex: 1,
   },
   daysContainer: {
-    flex: 4,
+    flex: 5.5,
+  },
+  divider: {
+    margin: 5,
+    marginBottom: 12,
   },
 });
 

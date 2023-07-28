@@ -18,25 +18,17 @@ const ExerciseHome = ({navigation}) => {
     <View style={styles.container}>
       <Header headerText={headerText} />
       <View style={styles.listContainer}>
-        <View style={[styles.exercisePill]}>
-          <ImageBackground
-            // source={'../assets/glutes.png'}
-            resizeMode="cover"
-            style={styles.image}>
-            <Text style={styles.text}>Glutes</Text>
-          </ImageBackground>
-        </View>
       </View>
       <View style={styles.buttonsContainer}>
         <TouchableOpacity
-          style={[styles.button, {backgroundColor: '#319AE5'}]}
+          style={[styles.button, {backgroundColor: '#319AE590'}]}
           onPress={() => navigateTo('routines')}>
           <Text style={styles.buttonText}>My Routines</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.button, {backgroundColor: '#E44040'}]}
+          style={[styles.button, {backgroundColor: '#E4404090'}]}
           onPress={() => navigateTo('workout-build')}>
-          <Text style={styles.buttonText}>Build Workout Routine</Text>
+          <Text style={styles.buttonText}>Build Routine</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -46,7 +38,9 @@ const ExerciseHome = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingBottom: 55,
+    paddingLeft: 15,
+    paddingRight: 15,
+    paddingBottom: 82,
     backgroundColor: '#09131F',
     flexDirection: 'column',
   },
@@ -61,13 +55,8 @@ const styles = StyleSheet.create({
   },
   buttonsContainer: {
     flex: 1,
-    padding: 8,
-  },
-  exercisePill: {
-    backgroundColor: 'pink',
-    height: 130,
-    borderRadius: 15,
-    margin: 4,
+    flexDirection: 'column',
+    marginBottom: 10,
   },
   button: {
     height: 50,
@@ -77,7 +66,7 @@ const styles = StyleSheet.create({
     marginBottom: 6,
   },
   buttonText: {
-    fontSize: 16,
+    fontSize: 14,
     color: 'white',
   },
   image: {

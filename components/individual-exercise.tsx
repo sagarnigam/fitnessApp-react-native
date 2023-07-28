@@ -36,11 +36,10 @@ const styles = StyleSheet.create({
   },
   colorContainer: {
     flex: 1,
-    margin: 8,
     borderRadius: 15,
   },
   text: {
-    fontSize: 14,
+    fontSize: 12,
     color: 'white',
   },
   headingContainer: {

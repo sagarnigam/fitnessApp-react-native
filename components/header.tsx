@@ -11,12 +11,16 @@ const Header = (props): JSX.Element => {
 
 const styles = StyleSheet.create({
   headerContainer: {
-    height: 70,
-    padding: 11,
+    width: '100%',
+    height: 100,
+    alignContent: 'center',
+    justifyContent: 'center',
   },
   headerText: {
     color: 'white',
-    fontSize: 30,
+    fontSize: 25,
+    fontFamily: 'Sans-Serif',
+    textAlign: 'center',
   },
 });
 

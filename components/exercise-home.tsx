@@ -8,8 +8,6 @@ import {
 } from 'react-native';
 import Header from './header';
 
-const gluteIcon = require('../assets/glutes.png');
-
 const ExerciseHome = ({navigation}) => {
   const headerText = 'Workout Home';
   const navigateTo = (page: string) => {
@@ -22,7 +20,7 @@ const ExerciseHome = ({navigation}) => {
       <View style={styles.listContainer}>
         <View style={[styles.exercisePill]}>
           <ImageBackground
-            source={gluteIcon}
+            // source={'../assets/glutes.png'}
             resizeMode="cover"
             style={styles.image}>
             <Text style={styles.text}>Glutes</Text>

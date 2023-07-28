@@ -24,8 +24,10 @@ const Home = (): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingBottom: 70,
+    paddingBottom: 0,
     backgroundColor: '#09131F',
+    paddingLeft: 15,
+    paddingRight: 15,
   },
   homeContainer: {
     flex: 1,

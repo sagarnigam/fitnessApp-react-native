@@ -34,7 +34,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#A9A9A930',
-    margin: 8,
     marginBottom: 0,
     flexDirection: 'column',
     padding: 5,
@@ -72,7 +71,7 @@ const styles = StyleSheet.create({
     color: '#ffffff80',
   },
   headingMd: {
-    fontSize: 14,
+    fontSize: 12,
     color: 'white',
   },
 });

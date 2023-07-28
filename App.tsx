@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 
-import BottomNavigation from './components/bottom-navigation';
+import BottomNavigation from './components/navigations/bottom-navigation';
 import {getAuthenticatedUser} from './services/authentication-service';
 
 const App = (): JSX.Element => {
@@ -23,7 +23,6 @@ const App = (): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 5,
     flexDirection: 'column',
     backgroundColor: '#09131F',
   },

@@ -2,22 +2,18 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import DailyOverview from '../components/daily-overview';
-import FitDetails from '../components/google-fit-details';
-import WeightChart from '../components/weight-chart';
+import Header from '../components/header';
 
 const Home = (): JSX.Element => {
+  const headerText = 'Hello Sagar';
+
   return (
     <View style={styles.container}>
       <ScrollView>
         <View style={styles.homeContainer}>
+          <Header headerText={headerText} />
           <View style={styles.overviewContainer}>
             <DailyOverview />
-          </View>
-          <View style={styles.graphContainer}>
-            <WeightChart />
-          </View>
-          <View style={styles.fitDetailscontainer}>
-            <FitDetails />
           </View>
         </View>
       </ScrollView>
@@ -28,9 +24,10 @@ const Home = (): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 100,
-    paddingBottom: 70,
+    paddingBottom: 0,
     backgroundColor: '#09131F',
+    paddingLeft: 15,
+    paddingRight: 15,
   },
   homeContainer: {
     flex: 1,
@@ -39,10 +36,6 @@ const styles = StyleSheet.create({
   overviewContainer: {
     flex: 1,
   },
-  graphContainer: {
-    flex: 1,
-  },
-  fitDetailscontainer: {},
 });
 
 export default Home;

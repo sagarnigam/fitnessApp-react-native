@@ -4,14 +4,16 @@ import {Divider} from '@rneui/themed';
 
 import ExerciseDetailsWidget from './exercise-details-widgets';
 import RoutineDetailsWidget from './routine-details-widget';
+import Header from './header';
 
 const WorkoutSchedule = (props): JSX.Element => {
+  const headerText = 'Routines';
+
   return (
     <View style={styles.container}>
-      <View style={styles.detailsContainer}>
-        <RoutineDetailsWidget routineDetails={props.route.params.props} />
-      </View>
-      <Divider inset={true} insetType="middle" />
+      <Header headerText={headerText} />
+      <RoutineDetailsWidget routineDetails={props.route.params.props} />
+      <Divider style={styles.divider} inset={true} insetType="middle" />
       <View style={styles.daysContainer}>
         <ScrollView>
           {props.route.params.props.exercise[
@@ -27,17 +29,22 @@ const WorkoutSchedule = (props): JSX.Element => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#09131F',
     flexDirection: 'column',
-    paddingTop: 100,
+    height: '100%',
+    paddingLeft: 15,
+    paddingRight: 15,
     paddingBottom: 70,
   },
   detailsContainer: {
     flex: 1,
   },
   daysContainer: {
-    flex: 4,
+    flex: 5.5,
+  },
+  divider: {
+    margin: 5,
+    marginBottom: 12,
   },
 });
 

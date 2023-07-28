@@ -18,15 +18,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#A9A9A930',
-    margin: 8,
-    marginBottom: 4,
-    marginTop: 4,
+    marginBottom: 7,
     flexDirection: 'row',
-    padding: 7,
+    padding: 5,
     borderRadius: 15,
   },
   text: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: 'bold',
     color: 'white',
   },

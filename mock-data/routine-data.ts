@@ -1,4 +1,5 @@
 import {RoutineInfo} from '../models/routines';
+import { EXERCISES } from './exercise-data';
 
 export const ROUTINES: any[] = [
   {
@@ -1708,9 +1709,109 @@ export const ROUTINES: any[] = [
   },
   {
     key: '3',
-    name: 'Routine 3',
+    name: 'Shredded',
     durationWeeks: 6,
-    exercise: [],
+    exercise: {
+      'Day 1': [
+        {
+          name: EXERCISES.pushup,
+          type: 'normal',
+          description: '1 set, 100 reps',
+        },
+        {
+          name: EXERCISES.inclineBench,
+          type: 'normal',
+          description: '3 sets, 8-10 Reps, 1 min rest',
+        },
+        {
+          name: EXERCISES.benchPress,
+          type: 'normal',
+          description: '3 sets, 8-10 Reps, 1 min rest',
+        },
+        {
+          name: EXERCISES.lowerCable,
+          type: 'normal',
+          description: '4 sets, 15 Reps, 1 min rest',
+        },
+        {
+          name: EXERCISES.cablePress,
+          type: 'normal',
+          description: '4 sets, 15 Reps, 1 min rest',
+        },
+        {
+          name: EXERCISES.upperCable,
+          type: 'normal',
+          description: '4 sets, 15 Reps, 1 min rest',
+        },
+        {
+          name: EXERCISES.pushup,
+          type: 'normal',
+          description: '1 set, till failure',
+        },
+      ],
+      'Day 2': [
+        {
+          type: 'superset',
+          exercise: [
+            {
+              name: EXERCISES.bbCurl,
+              type: 'normal',
+              description: '2 sets, 15 Reps, No rest',
+            },
+            {
+              name: EXERCISES.ezCrusher,
+              type: 'normal',
+              description: '2 sets, 15 Reps, 1 min rest',
+            },
+          ],
+        },
+        {
+          type: 'superset',
+          exercise: [
+            {
+              name: EXERCISES.bbCurl,
+              type: 'normal',
+              description: '4 sets, 12 Reps, No rest',
+            },
+            {
+              name: EXERCISES.ezCrusher,
+              type: 'normal',
+              description: '4 sets, 12 Reps, 1 min rest',
+            },
+          ],
+        },
+        {
+          type: 'superset',
+          exercise: [
+            {
+              name: EXERCISES.dbCurl,
+              type: 'normal',
+              description: '4 sets, 12 Reps, No rest',
+            },
+            {
+              name: EXERCISES.cablePushDown,
+              type: 'normal',
+              description: '4 sets, 12 Reps, 1 min rest',
+            },
+          ],
+        },
+        {
+          type: 'superset',
+          exercise: [
+            {
+              name: EXERCISES.cableHammer,
+              type: 'normal',
+              description: '4 sets, 12 Reps, No rest',
+            },
+            {
+              name: EXERCISES.cablePushDown,
+              type: 'normal',
+              description: '4 sets, 12 Reps, 1 min rest',
+            },
+          ],
+        },
+      ],
+    },
     estTime: '',
   },
 ];

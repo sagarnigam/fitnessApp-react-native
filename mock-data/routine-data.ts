@@ -1,5 +1,5 @@
-import {RoutineInfo} from '../models/routines';
-import { EXERCISES } from './exercise-data';
+import {EXERCISES} from './exercise-data';
+import {MB_JC_ROUTINE} from './routine-mb-jc';
 
 export const ROUTINES: any[] = [
   {
@@ -1814,4 +1814,5 @@ export const ROUTINES: any[] = [
     },
     estTime: '',
   },
+  MB_JC_ROUTINE,
 ];

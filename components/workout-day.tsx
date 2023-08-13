@@ -7,9 +7,6 @@ const WorkoutDay = ({workoutDay}): JSX.Element => {
       <View style={styles.headingContainer}>
         <Text style={styles.text}>{workoutDay}</Text>
       </View>
-      <View style={styles.actionContainer}>
-        <Text style={styles.text}>{'>'}</Text>
-      </View>
     </View>
   );
 };
@@ -32,11 +29,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 6,
     paddingLeft: 12,
-  },
-  actionContainer: {
-    flex: 2,
-    alignItems: 'flex-end',
-    padding: 7,
+    width: '100%',
   },
 });
 

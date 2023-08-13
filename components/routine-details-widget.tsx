@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#A9A9A930',
     flexDirection: 'column',
     borderRadius: 15,
-    padding: 5,
+    padding: 7,
     marginBottom: 7,
   },
   text: {

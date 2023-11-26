@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  ImageBackground,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -26,8 +25,7 @@ const ExerciseHome = ({navigation}) => {
           <Text style={styles.buttonText}>My Routines</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.button, {backgroundColor: '#E4404090'}]}
-          onPress={() => navigateTo('workout-build')}>
+          style={[styles.button, {backgroundColor: '#E4404090'}]}>
           <Text style={styles.buttonText}>Build Routine</Text>
         </TouchableOpacity>
       </View>
